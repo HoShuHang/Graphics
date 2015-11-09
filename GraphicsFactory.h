@@ -20,7 +20,6 @@ public:
     string pureString(string str);
     int getLevel(string str);
     string getStackTrace();
-    string getStackTraceBeforeLineFive();
     vector<Graphics *> getGraphicsStack();
     vector<int> getLevelStack();
     void setCurrentLevel(int c_level);
@@ -31,7 +30,6 @@ protected:
     int current_level = 0, pre_level = 0;
 private:
     stringstream stackTrace;
-    stringstream stackTraceBeforeLineFive;
     void pushToStack(Graphics * g);
     void popStack();
     void traceStack();

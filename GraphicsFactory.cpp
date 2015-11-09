@@ -16,7 +16,6 @@ Graphics * GraphicsFactory::buildGraphicsFromFile(const char * fileName)
         pushToStack(g);
         traceStack();
     }
-    stackTraceBeforeLineFive << stackTrace.str();
     while(graphicsStack.size() > 1)
         compose();
     traceStack();
@@ -108,11 +107,6 @@ void GraphicsFactory::traceStack()
 string GraphicsFactory::getStackTrace()
 {
     return stackTrace.str();
-}
-
-string GraphicsFactory::getStackTraceBeforeLineFive()
-{
-    return stackTraceBeforeLineFive.str();
 }
 
 vector<string> GraphicsFactory::split(string str, char delimiter)
